@@ -144,11 +144,19 @@ A.shape
 
 # ## 9.  Create a function and pass vector X and matrix A in it
 
+# In[23]:
+
+
+def matmul_new1(X,A):
+    D1=A.dot(X)
+    return D1
+
+
 # In[20]:
 
 
 def matmul_new(X,A):
-    D=A.dot(X)
+    D=np.matmul(A,X)
     return D
 
 
@@ -167,15 +175,29 @@ D=matmul_new(X,A)
 D
 
 
+# In[24]:
+
+
+D1=matmul_new1(X,A)
+
+
+# In[25]:
+
+
+D1
+
+
+# ##### Notice that dot and matmul returned the same result in this case
+
 # ## 11.  Create a complex number Z with absolute and real parts != 0
 
-# In[23]:
+# In[26]:
 
 
 Z=3+4j
 
 
-# In[24]:
+# In[27]:
 
 
 type(Z)
@@ -185,7 +207,7 @@ type(Z)
 
 # ### real part
 
-# In[25]:
+# In[28]:
 
 
 Z.real
@@ -193,7 +215,7 @@ Z.real
 
 # ### imaginary part
 
-# In[26]:
+# In[29]:
 
 
 Z.imag
@@ -201,7 +223,7 @@ Z.imag
 
 # ### absolute part
 
-# In[27]:
+# In[30]:
 
 
 np.absolute(Z)
@@ -209,19 +231,19 @@ np.absolute(Z)
 
 # ## 13.  Multiply result D with the absolute value of Z and record it to C
 
-# In[28]:
+# In[31]:
 
 
 D.shape
 
 
-# In[29]:
+# In[32]:
 
 
 C=D*np.absolute(Z)
 
 
-# In[30]:
+# In[33]:
 
 
 C
@@ -229,19 +251,19 @@ C
 
 # ## 14.  Convert matrix B from a matrix to a string and overwrite B
 
-# In[31]:
+# In[34]:
 
 
 B
 
 
-# In[32]:
+# In[35]:
 
 
 B=np.array_str(B)
 
 
-# In[33]:
+# In[36]:
 
 
 B
@@ -249,7 +271,7 @@ B
 
 # ## 15.  Display a text on the screen: ‘Your Name is done with HW2‘
 
-# In[34]:
+# In[37]:
 
 
 print('Zhicheng Xue is done with HW2')
